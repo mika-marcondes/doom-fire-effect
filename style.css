@@ -16,3 +16,11 @@ td {
     font-family: monospace;
     font-size: 12px;
 }
+
+.pixel-index {
+    font-size: 8px;
+    display: flex;
+    justify-content: right;
+    padding: 0 4px 1rem 0;
+    color: #999
+}
