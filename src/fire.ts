@@ -1,26 +1,26 @@
-const pixelArray: Array<number> = []
-
 interface Fire {
   width: number
   height: number
+  pixelArray: Array<number>
 }
 
 const fire: Fire = {
   width: 2,
   height: 3,
+  pixelArray: [],
 }
 
 function start() {
   createFireDataStructure(fire)
   renderFire(fire)
-  console.log(pixelArray)
+  console.log(fire.pixelArray)
 }
 
 function createFireDataStructure(fire: Fire) {
   const numberOfPixels = fire.width * fire.height
   
   for (let i = 0; i < numberOfPixels; i++) {
-    pixelArray[i] = 0
+    fire.pixelArray[i] = 0
   }
 }
 
