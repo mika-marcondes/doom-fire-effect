@@ -1,26 +1,31 @@
-const firePixelsArray: number[] = []
-const fireWidth = 3
-const fireHeight = 3
+const pixelArray: Array<number> = []
 
-function start() {
-    createFireDataStructure()
-    console.log(firePixelsArray)
+interface Fire {
+  width: number
+  height: number
 }
 
-function createFireDataStructure() {
-    const numberOfPixels = fireWidth * fireHeight
+function start() {
+  createFireDataStructure({
+    width: 3,
+    height: 3,
+  })
+  
+  console.log(pixelArray)
+}
 
-    for (let i = 0; i < numberOfPixels; i++) {
-        firePixelsArray[i] = 0
-    }
+function createFireDataStructure(fire: Fire) {
+  const numberOfPixels = fire.width * fire.height
+  
+  for (let i = 0; i < numberOfPixels; i++) {
+    pixelArray[i] = 0
+  }
 }
 
 function calculateFirePropagation() {
-
 }
 
 function renderFire() {
-
 }
 
 start()
