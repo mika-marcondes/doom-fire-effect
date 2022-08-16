@@ -14,6 +14,9 @@ function start() {
   createFireDataStructure(fire)
   createFireSource(fire)
   renderFire(fire)
+  calculateFirePropagation(fire)
+  
+  setInterval(calculateFirePropagation, 1000)
 }
 
 function createFireDataStructure(fire: Fire) {
@@ -24,8 +27,14 @@ function createFireDataStructure(fire: Fire) {
   }
 }
 
-// function calculateFirePropagation() {
-// }
+function calculateFirePropagation(fire: Fire) {
+  for (let column = 0; column < fire.width; column++) {
+    for (let row = 0; row < fire.height; row++) {
+      const pixelIndex = column + (fire.width * row)
+      console.log(pixelIndex)
+    }
+  }
+}
 
 function renderFire(fire: Fire) {
   let html = "<table>"
