@@ -1,5 +1,5 @@
-const firePixelsArray = []
-const fireWidth = 2
+const firePixelsArray: number[] = []
+const fireWidth = 3
 const fireHeight = 3
 
 function start() {
