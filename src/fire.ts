@@ -5,8 +5,8 @@ interface Fire {
 }
 
 const fire: Fire = {
-  width: 2,
-  height: 3,
+  width: 10,
+  height: 10,
   pixelArray: [],
 }
 
@@ -24,8 +24,8 @@ function createFireDataStructure(fire: Fire) {
   }
 }
 
-function calculateFirePropagation() {
-}
+// function calculateFirePropagation() {
+// }
 
 function renderFire(fire: Fire) {
   let html = "<table>"

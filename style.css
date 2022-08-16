@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+td {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: center;
+    font-family: monospace;
+    font-size: 12px;
+}
