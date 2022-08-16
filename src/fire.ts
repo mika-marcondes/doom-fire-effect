@@ -5,12 +5,14 @@ interface Fire {
   height: number
 }
 
+const fire: Fire = {
+  width: 2,
+  height: 3,
+}
+
 function start() {
-  createFireDataStructure({
-    width: 3,
-    height: 3,
-  })
-  
+  createFireDataStructure(fire)
+  renderFire(fire)
   console.log(pixelArray)
 }
 
@@ -25,7 +27,26 @@ function createFireDataStructure(fire: Fire) {
 function calculateFirePropagation() {
 }
 
-function renderFire() {
+function renderFire(fire: Fire) {
+  let html = "<table>"
+  
+  for (let row = 0; row < fire.height; row++) {
+    html += "<tr>"
+    
+    for (let column = 0; column < fire.width; column++) {
+      const pixelIndex = column + fire.width * row
+      
+      html += "<td>"
+      html += pixelIndex
+      html += "</td>"
+    }
+    
+    html += "</tr>"
+  }
+  
+  html += "</table>"
+  
+  document.querySelector("#fireCanvas")!.innerHTML = html
 }
 
 start()
