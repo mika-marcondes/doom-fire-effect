@@ -14,9 +14,8 @@ function start() {
   createFireDataStructure(fire)
   createFireSource(fire)
   renderFire(fire)
-  calculateFirePropagation(fire)
   
-  setInterval(calculateFirePropagation, 1000)
+  setInterval(calculateFirePropagation, 1000, fire)
 }
 
 function createFireDataStructure(fire: Fire) {
