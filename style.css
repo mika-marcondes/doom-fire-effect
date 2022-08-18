@@ -12,23 +12,23 @@ table {
 }
 
 td {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border: 1px solid #000;
     text-align: center;
     vertical-align: center;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 td.pixel {
-    width: 4px;
-    height: 4px;
+    width: .6rem;
+    height: .6rem;
     border: 0;
 }
 
 .pixel-index {
-    font-size: 7px;
+    font-size: 9px;
     display: flex;
     justify-content: right;
     color: #999;
