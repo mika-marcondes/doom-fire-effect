@@ -4,9 +4,8 @@
 }
 
 body {
-    /*background-color: hsl(0, 25%, 30%);*/
     height: 100vh;
-    background: linear-gradient(to top, hsl(0, 40%, 16%) 60%, hsla(0, 30%, 10%) 120%) no-repeat;
+    background: hsl(0, 25%, 30%) linear-gradient(to top, hsl(0, 40%, 16%) 60%, hsla(0, 30%, 10%) 120%) no-repeat;
     overflow: hidden;
 }
 
