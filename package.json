@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build:typescript": "tsc --build",
+    "build:copyfiles": "cp ./src/index.html dist/index.html && cp ./src/style.css dist/style.css",
+    "build": "yarn clean && yarn build:typescript && yarn build:copyfiles"
+  },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1"
+    "typescript": "^4.7.4"
   }
 }
