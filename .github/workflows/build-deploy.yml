@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
-        run: yarn build
+      - name: Create Dirs
+        run: mkdir -p /dist/styles && mkdir -p /dist/scripts
 
       - name: Build
-        run: mkdir -p /dist/styles
+        run: yarn build
 
       - name: Copy build files
         run: yarn build:copyFiles
