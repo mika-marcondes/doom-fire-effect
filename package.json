@@ -2,8 +2,8 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build:typescript": "tsc --build",
-    "build:copyfiles": "cp ./src/index.html dist/index.html && cp ./src/style.css dist/style.css",
-    "build": "yarn clean && yarn build:typescript && yarn build:copyfiles"
+    "build:copyFiles": "cp ./src/index.html dist/index.html && cp ./src/styles/style.css ./dist/styles/style.css",
+    "build": "yarn clean && yarn build:typescript && npx mkdirp .\\dist\\styles && yarn build:copyFiles"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
