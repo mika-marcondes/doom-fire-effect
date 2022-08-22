@@ -24,6 +24,12 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Build
+        run: mkdir .\\dist\\styles
+
+      - name: Copy build files
+        run: yarn build:copyFiles
+
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:

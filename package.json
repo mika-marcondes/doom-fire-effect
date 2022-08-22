@@ -2,8 +2,10 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build:typescript": "tsc --build",
+    "build:createFolders": "npx mkdirp .\\dist\\styles",
     "build:copyFiles": "cp ./src/index.html dist/index.html && cp ./src/styles/style.css ./dist/styles/style.css",
-    "build": "yarn clean && yarn build:typescript && npx mkdirp .\\dist\\styles && yarn build:copyFiles"
+    "build:local": "yarn clean && yarn build:typescript && yarn build:createFolders && yarn build:copyFiles",
+    "build": "yarn clean && yarn build:typescript"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
