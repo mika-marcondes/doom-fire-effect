@@ -8,22 +8,27 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup NodeJs
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-        cache: 'npm'
-        
-    - run: npm ci
-    
-    - run: npm run build --if-present
-    
-    - name: Deploy to GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v3
-      with:
-        target_branch: gh-pages
-        build_dir: dist
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
