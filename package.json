@@ -5,7 +5,7 @@
     "build:createFolders": "npx mkdirp .\\dist\\styles",
     "build:copyFiles": "cp ./src/index.html dist/index.html && cp ./src/styles/style.css ./dist/styles/style.css",
     "build:local": "yarn clean && yarn build:typescript && yarn build:createFolders && yarn build:copyFiles",
-    "build": "yarn clean && yarn build:typescript"
+    "build": "yarn build:typescript"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
